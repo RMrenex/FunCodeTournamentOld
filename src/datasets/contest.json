@@ -1,0 +1,103 @@
+{
+    "9b9d6268-6e84-4b6c-8b9a-a2092cf30c4b": {
+        "name": "Concours web",
+        "start_date": "2022-02-12",
+        "end_date": "2022-02-12",
+        "type": "web",
+        "finish": true,
+        "users": [
+            {
+                "rank": 1,
+                "contributors": ["Canne_à_pêche"]
+            },
+            {
+                "rank": 2,
+                "contributors": ["le_gabi", "Caranouga"]
+            },
+            {
+                "rank": 3,
+                "contributors": ["Erem", "Hiken_D_Ace"]
+            },
+            {
+                "rank": 4,
+                "contributors": ["StayAway"]
+            },
+            {
+                "rank": 5,
+                "contributors": ["MajesticFoxy"]
+            },
+            {
+                "rank": 6,
+                "contributors": ["bouDeScotch"]
+            }
+        ]
+    }, 
+    "018d3612-c71e-4ff5-b95e-a6bb2f318f4f": {
+        "name": "Concours algo",
+        "start_date": "2022-03-18",
+        "end_date": "2022-03-18",
+        "type": "algo",
+        "finish": false,
+        "users": [
+            "Canne_à_pêche",
+            "le_gabi",
+            "Caranouga",
+            "Erem",
+            "Hiken_D_Ace",
+            "StayAway",
+            "MajesticFoxy",
+            "bouDeScotch"
+        ]
+    },
+    "e3e547c1-1e63-436d-9a91-9f57d9a0342a": {
+        "name": "Concours game jam",
+        "start_date": "2022-03-20",
+        "end_date": "2022-03-25",
+        "type": "jam",
+        "finish": false,
+        "users": [
+            "Canne_à_pêche",
+            "le_gabi",
+            "Caranouga",
+            "Erem",
+            "Hiken_D_Ace",
+            "StayAway",
+            "MajesticFoxy",
+            "bouDeScotch"
+        ]
+    },
+    "d83e18d8-fdb7-4c46-9b36-0427af3d125f": {
+        "name": "Concours web",
+        "start_date": "2022-02-28",
+        "end-date": "2022-03-07",
+        "type": "web",
+        "finish": false,
+        "users": [
+            "Canne_à_pêche",
+            "le_gabi",
+            "Caranouga",
+            "Erem",
+            "Hiken_D_Ace",
+            "StayAway",
+            "MajesticFoxy",
+            "bouDeScotch"
+        ]
+    },
+    "edfd2523-7dbd-4b5a-83af-9c72bbbdf85a": {
+        "name": "Concours algo",
+        "start_date": "2022-05-12",
+        "end_date": "2022-05-12",
+        "type": "algo",
+        "finish": false,
+        "users": [
+            "Canne_à_pêche",
+            "le_gabi",
+            "Caranouga",
+            "Erem",
+            "Hiken_D_Ace",
+            "StayAway",
+            "MajesticFoxy",
+            "bouDeScotch"
+        ]
+    }
+}

@@ -1,5 +1,84 @@
 .hero{
+    padding: 2rem 1rem;
     width: 100vw;
-    height: 30vh;
     background: $blue-gradiant;
+}
+
+.container{
+    display: flex;
+    margin: 4rem 0rem;
+    @media screen and (max-width: 768px){
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 15rem;
+    }
+    &__text, &__logo{
+        width: 50%;
+        position: relative;
+        @media screen and (max-width: 768px){
+            width: 100%;
+        }
+    }
+    &__text{
+        & h1{
+            font-weight: bold;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+        & p{
+            font-size: 1.1rem;
+            font-weight: bold;
+            line-height: 1.5rem;
+            margin: 2rem 0rem;
+        }
+    }
+    &__logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 0rem;
+        @media screen and (max-width: 768px){
+            margin-bottom: 15rem;
+        }
+        & img{
+            position: absolute;
+        }
+        &--logo{
+            width: 300px;
+            height: 300px;
+            z-index: 40;
+            @media screen and (max-width: 1080px){
+                width: 250px;
+                height: 250px;
+            }
+            @media screen and (max-width: 425px){
+                width: 150px;
+                height: 150px;
+            }
+        }
+        &--shape1, &--shape2, &--shape3{
+            width: 550px;
+            height: 550px;
+            @media screen and (max-width: 1080px){
+                width: 475px;
+                height: 475px;
+            }
+            @media screen and (max-width: 425px){
+                height: 300px;
+                width: 300px;
+            }
+        }
+        &--shape1 {
+            opacity: 0.4;
+            z-index: 30;
+        }
+        &--shape2{
+            opacity: 0.6;
+            z-index: 20;
+        }
+        &--shape3{
+            opacity: 0.8;
+            z-index: 10;
+        }
+    }
 }

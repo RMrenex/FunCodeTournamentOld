@@ -10,17 +10,18 @@ body, html {
     box-sizing: border-box;
     font-size: 1rem;
     background: $white;
-    color: $black;
+    color: $white;
     scroll-behavior: smooth;
     font-family: 'Roboto', sans-serif;
 }
 
 a{
     text-decoration: none;
+    color: $white;
 }
 
 p {
-    color: $black;
+    color: $white;
 }
 
 ul{

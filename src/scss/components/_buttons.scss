@@ -1,0 +1,5 @@
+.border-button{
+    @include buttons;
+    border: 3px solid $white;
+    background: none;
+}

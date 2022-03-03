@@ -1,11 +1,13 @@
 // UTILS
 @import "./utils/variables";
+@import "./utils/mixins";
 
 // BASE
 @import "./base/base";
 
 // COMPENENT
 @import "./components/hero";
+@import "./components/buttons";
 
 // LAYOUTS
 @import "./layouts/navbar"

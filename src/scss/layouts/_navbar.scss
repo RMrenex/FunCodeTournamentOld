@@ -1,0 +1,47 @@
+.navbar{
+    padding-top: 2rem;
+    padding-left: 1rem;
+    & ul{
+        display: flex;
+        gap: 20px;
+        & li a{
+            color: $white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: relative;
+            &::before{
+                content : "";
+                position: absolute;
+                top: 30px;
+                left: 1px;
+                width: 0px;
+                border-bottom: 5px solid $white;
+                transition: width 0.3s;
+            }
+            &:hover{
+                &::before{
+                    width: 100%;
+                    border-color: $white;
+                }
+            }
+            @media screen and (max-width: 610px) {
+                font-size: 1.2rem;
+            }
+            @media screen and (max-width: 425px) {
+                font-size: 0.7rem;
+                &::before{
+                    top: 20px;
+                    border-bottom: 2px solid $white;
+                }
+            }
+            @media screen and (max-width: 280px) {
+                font-size: 0.5rem;
+            }
+        }
+    }
+    @media screen and (max-width: 280px) {
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+    }
+}

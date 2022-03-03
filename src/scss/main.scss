@@ -2,10 +2,12 @@
 @import "./utils/variables";
 
 // BASE
-@import "./base/base"
+@import "./base/base";
 
 // COMPENENT
+@import "./components/hero";
 
 // LAYOUTS
+@import "./layouts/navbar"
 
 // PAGES

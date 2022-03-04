@@ -1,5 +1,8 @@
 $light-blue: #0445fc;
 $dark-blue: #05133D;
+
 $white: white;
 $black: #141414;
-$blue-gradiant: linear-gradient(60deg, $light-blue, $dark-blue);
+
+$right-gradiant: linear-gradient(60deg, $light-blue, $dark-blue);
+$left-gradiant: linear-gradient(60deg, $dark-blue, $light-blue);

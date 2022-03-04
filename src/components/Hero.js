@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
     
     return (
-        <div className="hero">
+        <section className="hero" id="About">
 
             <div className="navbar">
                 <ul>
@@ -27,7 +27,7 @@ const Hero = () => {
                     <img src={require('../assets/shape3.png')} alt="Forme géometrique" className="container__logo--shape3"></img>
                 </div>
             </div>
-        </div>
+        </section>
     );
 
 }

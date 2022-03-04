@@ -3,3 +3,9 @@
     border: 3px solid $white;
     background: none;
 }
+
+.button{
+    @include buttons;
+    background: $right-gradiant;
+    padding: 1.5rem 2rem;
+}

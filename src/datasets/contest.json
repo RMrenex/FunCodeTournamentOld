@@ -1,5 +1,6 @@
-{
-    "9b9d6268-6e84-4b6c-8b9a-a2092cf30c4b": {
+[
+    {
+        "uuid": "52302c0d-ace1-4d40-b03e-2fb324b5c6c3",
         "name": "Concours web",
         "start_date": "2022-02-12",
         "end_date": "2022-02-12",
@@ -31,8 +32,9 @@
                 "contributors": ["bouDeScotch"]
             }
         ]
-    }, 
-    "018d3612-c71e-4ff5-b95e-a6bb2f318f4f": {
+    },
+    {
+        "uuid": "191f2011-5ee5-442a-ba5f-59f6be383a8b",
         "name": "Concours algo",
         "start_date": "2022-03-18",
         "end_date": "2022-03-18",
@@ -49,7 +51,8 @@
             "bouDeScotch"
         ]
     },
-    "e3e547c1-1e63-436d-9a91-9f57d9a0342a": {
+    {
+        "uuid": "2cf45682-d9d3-484b-8cd9-268188c14247",
         "name": "Concours game jam",
         "start_date": "2022-03-20",
         "end_date": "2022-03-25",
@@ -66,7 +69,8 @@
             "bouDeScotch"
         ]
     },
-    "d83e18d8-fdb7-4c46-9b36-0427af3d125f": {
+    {
+        "uuid": "36445c1f-b55c-4ddc-a02d-4fa8c5e6e0ce",
         "name": "Concours web",
         "start_date": "2022-02-28",
         "end-date": "2022-03-07",
@@ -83,7 +87,8 @@
             "bouDeScotch"
         ]
     },
-    "edfd2523-7dbd-4b5a-83af-9c72bbbdf85a": {
+    {
+        "uuid": "a5134969-2d17-426f-af42-28235a157bd9",
         "name": "Concours algo",
         "start_date": "2022-05-12",
         "end_date": "2022-05-12",
@@ -100,4 +105,5 @@
             "bouDeScotch"
         ]
     }
-}
+
+]

@@ -12,6 +12,7 @@
 @import "./components/podium-card";
 @import "./components/calendar";
 @import "./components/article";
+@import "./components/table";
 
 // LAYOUTS
 @import "./layouts/navbar";
@@ -22,4 +23,5 @@
 
 // PAGES
 @import "./pages/login";
-@import "./pages/blog"
+@import "./pages/blog";
+@import "./pages/article"

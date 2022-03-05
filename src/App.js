@@ -11,6 +11,10 @@ import Login from './components/Login';
 // INDEX BLOG PAGE
 import Blog from './components/Blog';
 
+// ARTICLE BLOG PAGE
+import Article from './components/Article';
+
+
 
 function App() {
   return (
@@ -26,7 +30,11 @@ function App() {
       {/* <Login /> */}
 
       {/*INDEX BLOG PAGE*/}
-      <Blog />
+      {/*<Blog />
+      <Footer /> */}
+
+      {/*ARTICLE BLOG PAGE*/}
+      <Article />
       <Footer />
     </div>
   );

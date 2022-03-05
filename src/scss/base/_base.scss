@@ -32,3 +32,17 @@ ul{
 section{
     margin-bottom: 5rem;
 }
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    background: $white;
+}
+::-webkit-scrollbar-thumb{
+    background: $top-gradiant;
+    &:hover{
+        background: darken($light-blue, $amount: 10%);
+    }
+}

@@ -8,9 +8,9 @@ const Hero = () => {
 
                 <div className="navbar">
                     <ul>
-                        <li><a href="#">Qui sommes-nous ?</a></li>
-                        <li><a href="#">Gagnants</a></li>
-                        <li><a href="#">Calendrier</a></li>
+                        <li><a href="#about">Qui sommes-nous ?</a></li>
+                        <li><a href="#podium">Gagnants</a></li>
+                        <li><a href="#calendar">Calendrier</a></li>
                         <li><a href="#">Blog</a></li>
                     </ul>
                 </div>
@@ -19,7 +19,7 @@ const Hero = () => {
                     <div className="container__text">
                         <h1>FunCode Tournament</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <button className="border-button"><a href="#">EN SAVOIR PLUS</a></button>
+                        <a href="#about"><button className="border-button">EN SAVOIR PLUS</button></a>
                     </div>
                     <div className="container__logo">
                         <img src={require('../assets/logo.png')} alt="Logo FunCode Tournament" className="container__logo--logo"></img>

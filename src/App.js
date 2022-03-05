@@ -5,7 +5,6 @@ import Footer from './components/Footer';
 import Login from './components/LoginForm';
 import BlogSection from './components/BlogSection';
 
-import Req from './pages/Req'
 function App() {
 
   return (

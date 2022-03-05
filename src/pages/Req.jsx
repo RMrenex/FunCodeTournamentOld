@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {verifyAdminCredential} from '../services/users_services'
+import {createNewContest} from '../services/contest_service'
 
 class Req extends Component {
 
     componentDidMount(){
-        verifyAdminCredential();
+        //createNewContest(obj);
     }
 
     render() {

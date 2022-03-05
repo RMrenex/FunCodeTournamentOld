@@ -1,0 +1,54 @@
+.podium-card{
+    width: 300px;
+    height: 300px;
+    background: $right-gradiant;
+    border-radius: 10px;
+    position: relative;
+    &__place{
+        width: 50px;
+        height: 80px;
+        padding: 1rem;
+        border-radius: 10px;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 17rem;
+        right: 40%;
+        left: 40%;
+        &--first{
+            background-color: gold;
+        }
+        &--second{
+            background-color: silver;
+        }
+        &--third{
+            background-color: #E7A854;
+        }
+    }
+    &__icon{
+        width: 100px;
+        height: 100px;
+        background-color: $light-blue;
+        border-radius: 10px;
+        box-shadow: inset 0px 0px 25px 0px $black;
+        display: flex;
+        justify-content: center;
+        font-size: 3rem;
+        align-items: center;
+        position: absolute;
+        right: 30%;
+        left: 30%;
+        bottom: 45%;
+    }
+    &__player{
+        position: absolute;
+        bottom: 1rem;
+        text-align: center;
+        width: 100%;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}

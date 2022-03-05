@@ -1,9 +1,21 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Hero from './components/Hero';
+import Footer from './components/Footer';
+import Login from './components/LoginForm';
+import BlogSection from './components/BlogSection';
 
 function App() {
   return (
-    <div className="App">
-      <h1>FunCodeTournament</h1>
-    </div>
+    <Router>
+      <Hero/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/blog' element={<BlogSection/>}/>
+      </Routes>
+      <Footer/>
+    </Router>
   );
 }
 

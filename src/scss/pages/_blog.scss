@@ -1,0 +1,36 @@
+.blog-container{
+    padding: 10rem 25rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    @media screen and (max-width: 1440px){
+        padding: 10rem 10rem;
+    }
+    @media screen and (max-width: 768px){
+        padding: 5rem 1rem;
+    }
+    &__link{
+        color: $light-blue;
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-bottom: 5rem;
+        position: relative;
+        width: 100%;
+        &::before{
+            content : "";
+            position: absolute;
+            top: 30px;
+            left: 1px;
+            width: 10%;
+            border-bottom: 5px solid $light-blue;
+            transition: width 0.3s;
+        }
+        &:hover{
+            &::before{
+                width: 24%;
+                border-color: $light-blue;
+            }
+        }
+    }
+}

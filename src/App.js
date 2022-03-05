@@ -2,6 +2,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Podium from './components/Podium';
 import Calendar from './components/Calendar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <About />
       <Podium />
       <Calendar />
+      <Footer />
     </div>
   );
 }

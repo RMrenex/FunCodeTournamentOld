@@ -1,10 +1,13 @@
 .calendar-container{
 	width: 100%;
 	padding: 10rem 5rem;
+	@media screen and (max-width: 768px){
+		padding: 10rem 1rem;
+	}
 	&__title{
 		width: 100%;
 		background: $right-gradiant;
-		font-size: 2vw;
+		font-size: max(2vw, min(1rem));
 		text-align: center;
 		padding: 2rem 1rem;
 	}
@@ -20,10 +23,16 @@
 			border: 1px solid $light-blue;
 			align-items: center;
 			justify-content: center;
-			font-size: 2vw;
+			font-size: max(2vw, min(1rem));
 			font-weight: bold;
 			& p{
 				color: $light-blue;
+			}
+			@media screen and (max-width: 425px){
+				flex: 1 0 20%;
+			}
+			@media screen and (max-width: 320px){
+				flex: 1 0 35%;
 			}
 			
 		}
@@ -33,11 +42,37 @@
 			background-color: $light-blue;
 			& p{
 				color: $white;
-				font-size: 1.5vw;
+				font-size: max(1.5vw, min(0.5rem));
 				margin: 0.8vw 0vw;
+				@media screen and (max-width: 375px){
+					display: none;
+				}
 			}
-			& button{
+			& a{
 				font-size: 1vw;
+				position: absolute;
+				&::before{
+					content : "";
+					position: absolute;
+					top: 30px;
+					left: 1px;
+					width: 30%;
+					border-bottom: 5px solid $white;
+					transition: width 0.3s;
+				}
+				&:hover{
+					&::before{
+						width: 100%;
+						border-color: $white;
+					}
+				}
+				@media screen and (max-width: 768px) {
+					font-size: 0.5rem;
+					&::before{
+						top: 10px;
+						border-bottom: 2px solid $white;
+					}
+				}
 			}
 		}
 		&--active{

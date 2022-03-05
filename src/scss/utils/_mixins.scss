@@ -1,7 +1,7 @@
 @mixin buttons{
     color: $white;
     text-transform: uppercase;
-    font-size: 1.3vw;
+    font-size: max(1.3vw, min(1.3rem));
     font-weight: bold;
     outline: none;
     border: none;
@@ -14,15 +14,14 @@
 @mixin section-title{
     color: $white;
     text-transform: uppercase;
-    font-size: 2vw;
+    font-size: max(2vw, min(1rem));
     font-weight: bold;
     padding: 1rem 10rem;
     position: absolute;
     @media screen and (max-width: 1024px){
-        font-size: 1rem;
         padding: 1rem 5rem;
     }
     @media screen and (max-width: 425px){
         padding: 1rem 2rem;
-    }
+    } 
 }

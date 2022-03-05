@@ -2,7 +2,7 @@
     padding: 10rem 5rem;
     &__link{
         color: $light-blue;
-        font-size: 1.5vw;
+        font-size: max(1.5vw, min(1.4rem));
         font-weight: bold;
         position: absolute;
         margin-top: 3rem;
@@ -23,14 +23,22 @@
                 border-color: $light-blue;
             }
         }
-        @media screen and (max-width: 610px) {
-            font-size: 1.2rem;
-        }
         @media screen and (max-width: 425px) {
-            font-size: 0.5rem;
+            font-size: 1rem;
             &::before{
                 top: 20px;
                 border-bottom: 2px solid $white;
+            }
+        }
+        @media screen and (max-width: 375px){
+            font-size: 0.8rem;
+        }
+        @media screen and (max-width: 320px){
+            font-size: 0.58rem;
+        }
+        @media screen and (min-width: 2560px){
+            &::before{
+                top: 40px;
             }
         }
     }
@@ -47,5 +55,8 @@
     @media screen and (max-width: 1024px){
         display: flex;
         gap: 5rem;
+    }
+    @media screen and (min-width: 2560px){
+        margin-top: 5rem;
     }
 }

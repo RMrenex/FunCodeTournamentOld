@@ -20,7 +20,7 @@ const Calendar = () => {
                     <div className="calendar-container__days--day calendar-container__days--event">
                         <p>10</p>
                         <p>Début concours web</p>
-                        <button className="border-button">INFORMATIONS</button>
+                        <a href="">INFORMATIONS</a>
                     </div>
                     <div className="calendar-container__days--day calendar-container__days--active"><p>11</p></div>
                     <div className="calendar-container__days--day calendar-container__days--active"><p>12</p></div>
@@ -31,7 +31,7 @@ const Calendar = () => {
                     <div className="calendar-container__days--day calendar-container__days--event">
                         <p>17</p>
                         <p>Fin concours web</p>
-                        <button className="border-button">INFORMATIONS</button>
+                        <a href="">INFORMATIONS</a>
                     </div>
                     <div className="calendar-container__days--day"><p>18</p></div>
                     <div className="calendar-container__days--day"><p>19</p></div>

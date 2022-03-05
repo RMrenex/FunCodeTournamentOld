@@ -1,4 +1,8 @@
 import React from "react";
+import logo from '../assets/logo.png'
+import shape1 from '../assets/shape1.png'
+import shape2 from '../assets/shape2.png'
+import shape3 from '../assets/shape3.png'
 
 const Hero = () => {
 
@@ -11,7 +15,7 @@ const Hero = () => {
                         <li><a href="#about">Qui sommes-nous ?</a></li>
                         <li><a href="#podium">Gagnants</a></li>
                         <li><a href="#calendar">Calendrier</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="/blog">Blog</a></li>
                     </ul>
                 </div>
 
@@ -22,10 +26,10 @@ const Hero = () => {
                         <a href="#about"><button className="border-button">EN SAVOIR PLUS</button></a>
                     </div>
                     <div className="container__logo">
-                        <img src={require('../assets/logo.png')} alt="Logo FunCode Tournament" className="container__logo--logo"></img>
-                        <img src={require('../assets/shape1.png')} alt="Forme géometrique" className="container__logo--shape1"></img>
-                        <img src={require('../assets/shape2.png')} alt="Forme géometrique" className="container__logo--shape2"></img>
-                        <img src={require('../assets/shape3.png')} alt="Forme géometrique" className="container__logo--shape3"></img>
+                        <img src={logo} alt="Logo FunCode Tournament" className="container__logo--logo"></img>
+                        <img src={shape1} alt="Forme géometrique" className="container__logo--shape1"></img>
+                        <img src={shape2} alt="Forme géometrique" className="container__logo--shape2"></img>
+                        <img src={shape3} alt="Forme géometrique" className="container__logo--shape3"></img>
                     </div>
                 </div>
             </section>

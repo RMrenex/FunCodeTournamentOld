@@ -1,4 +1,5 @@
 import React from "react";
+import loginIllu from '../assets/login-illu.png'
 
 const Login = () => {
 
@@ -24,7 +25,7 @@ const Login = () => {
                 <button className="border-button">CONNEXION</button>
             </div>
             <div className="login-container__illustration">
-                <img src={require('../assets/login-illu.png')} alt="Login illustration" className="login-container__illustration--image"></img>
+                <img src={loginIllu} alt="Login illustration" className="login-container__illustration--image"></img>
             </div>
         </div>
     );

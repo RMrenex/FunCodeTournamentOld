@@ -1,42 +1,21 @@
-// MAIN PAGE
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
 import Hero from './components/Hero';
-import About from './components/About';
-import Podium from './components/Podium';
-import Calendar from './components/Calendar';
 import Footer from './components/Footer';
-
-// LOGIN PAGE
-import Login from './components/Login';
-
-// INDEX BLOG PAGE
-import Blog from './components/Blog';
-
-// ARTICLE BLOG PAGE
-import Article from './components/Article';
-
-
+import Login from './components/LoginForm';
+import BlogSection from './components/BlogSection';
 
 function App() {
   return (
-    <div className="App">
-      {/*MAIN PAGE*/}
-      {/*<Hero />
-      <About />
-      <Podium />
-      <Calendar />
-      <Footer /> */}
-
-      {/*LOGIN PAGE*/}
-      {/* <Login /> */}
-
-      {/*INDEX BLOG PAGE*/}
-      {/*<Blog />
-      <Footer /> */}
-
-      {/*ARTICLE BLOG PAGE*/}
-      <Article />
-      <Footer />
-    </div>
+    <Router>
+      <Hero/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/blog' element={<BlogSection/>}/>
+      </Routes>
+      <Footer/>
+    </Router>
   );
 }
 

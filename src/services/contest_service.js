@@ -5,12 +5,7 @@ const DEV_URL = 'http://localhost:3000'
 
 export const retrieveContests = () => {
 
-    axios.get(DEV_URL + '/api/contest').then(
-        res => {
-            return res.data;
-        }).catch((err) => {
-            console.log(err);
-        });
+    return axios.get(DEV_URL + '/api/contest').then(res => res.data);
 }
 
 export const createNewContest = (contest) => {
@@ -26,7 +21,7 @@ export const createNewContest = (contest) => {
     });
 }
 
-export const updateContest = (contest) => {
+export const updateContest = () => {
 
     axios.put(DEV_URL + '/api/contest', {}).then(
         res => {

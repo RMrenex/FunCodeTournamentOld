@@ -8,8 +8,7 @@ class Podium extends Component {
         let contests = await retrieveContests();
         contests.forEach(contest => {
             if (contest.finish === true) {
-                this.setState({ lastContest: contest.users });
-                console.log(this.state.lastContest[1].contributors)
+                this.setState({ lastContestContributors: contest.users });
             }
         })
     }
@@ -26,7 +25,7 @@ class Podium extends Component {
                             <div className="podium-card__player">
                                 {
                                     this.state !== null && (
-                                        <p>{this.state.lastContest[0].contributors}</p>
+                                        <p>{this.state.lastContestContributors[0].contributors}</p>
                                     )
                                 }
                             </div>
@@ -38,7 +37,7 @@ class Podium extends Component {
                             <div className="podium-card__player">
                                 {
                                     this.state !== null && (
-                                        this.state.lastContest[1].contributors.map(contributor => {
+                                        this.state.lastContestContributors[1].contributors.map(contributor => {
                                             return (<p key={contributor}>{contributor}</p>)
                                         })
                                     )
@@ -52,7 +51,7 @@ class Podium extends Component {
                             <div className="podium-card__player">
                                 {
                                     this.state !== null && (
-                                        this.state.lastContest[2].contributors.map(contributor => {
+                                        this.state.lastContestContributors[2].contributors.map(contributor => {
                                             return (<p key={contributor}>{contributor}</p>)
                                         })
                                     )

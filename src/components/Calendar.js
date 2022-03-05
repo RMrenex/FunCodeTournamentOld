@@ -1,14 +1,44 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { retrieveContests } from '../services/contest_service'
+const YEAR = new Date().getFullYear();
+let month = new Date().getMonth() + 1;
 
-const Calendar = () => {
+class Calendar extends Component {
 
-    return (
-        <section className="calendar" id="calendar">
+    async componentDidMount(){
+        console.log(YEAR, month)
+        this.getDaysOfMonthInArray();
+        //let contests = await retrieveContests();
+        //this.setState({contests: contests});
+    }
+
+    getDaysOfMonthInArray() {
+        let monthIndex = month - 1;
+        let date = new Date(YEAR, monthIndex, 1);
+        let result = [];
+        while (date.getMonth() == monthIndex) {
+          result.push(date.getDate());
+          date.setDate(date.getDate() + 1);
+        }
+        this.setState({daysInMonth: result});
+      }
+
+    render(){
+        return (
+            <section className="calendar" id="calendar">
             <div className="left-title"><h2>GAGNANTS DU DERNIER CONCOURS</h2></div>
             <div className="calendar-container">
-                <div className="calendar-container__title"><h3>CALENDRIER DE MARS 2022</h3></div>
+                <div className="calendar-container__title"><h3>CALENDRIER DE MARS {YEAR}</h3></div>
                 <div className="calendar-container__days">
-                    <div className="calendar-container__days--day"><p>1</p></div>
+                    {
+                        this.state !== null && (
+                            this.state.daysInMonth.map((day, i) => {
+                                return (<div key={i} className="calendar-container__days--day"><p>{day}</p></div>)
+                            })
+                        )
+                        
+                    }
+                    {/*<div className="calendar-container__days--day"><p>1</p></div>
                     <div className="calendar-container__days--day"><p>2</p></div>
                     <div className="calendar-container__days--day"><p>3</p></div>
                     <div className="calendar-container__days--day"><p>4</p></div>
@@ -51,13 +81,11 @@ const Calendar = () => {
                     <div className="calendar-container__days--day"></div>
                     <div className="calendar-container__days--day"></div>
                     <div className="calendar-container__days--day"></div>
-                    <div className="calendar-container__days--day"></div>
+                    <div className="calendar-container__days--day"></div>*/}
                     
                 </div>
             </div>
         </section>
-    );
-
-}
-
-export default Calendar;
+        )
+    }
+} export default Calendar;

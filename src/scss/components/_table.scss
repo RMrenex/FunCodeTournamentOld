@@ -1,0 +1,18 @@
+td {
+    border-bottom: 3px solid $light-blue;
+    border-left: 3px solid $light-blue;
+    color: $black;
+    font-size: max(2vw, min(1rem));
+    text-transform: uppercase;
+}
+
+thead{
+    background: $left-gradiant;
+    font-size: max(3vw, min(1rem));
+    color: #fff;
+    text-transform: uppercase;
+}
+
+th, td{
+    padding: 1rem 2rem;
+}

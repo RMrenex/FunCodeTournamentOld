@@ -1,0 +1,13 @@
+.right-title{
+    @include section-title;
+    background: $right-gradiant;
+    border-radius: 50px 0px 0px 50px;
+    right: 0;
+}
+
+.left-title{
+    @include section-title;
+    background: $left-gradiant;
+    border-radius: 0px 50px 50px 0px;
+    left: 0;
+}

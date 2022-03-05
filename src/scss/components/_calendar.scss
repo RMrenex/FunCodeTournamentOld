@@ -1,0 +1,50 @@
+.calendar-container{
+	width: 100%;
+	padding: 10rem 5rem;
+	&__title{
+		width: 100%;
+		background: $right-gradiant;
+		font-size: 2vw;
+		text-align: center;
+		padding: 2rem 1rem;
+	}
+	&__days{
+		width: 100%;
+		border: 1px solid $light-blue;
+		display: flex;
+		flex-wrap: wrap;
+		&--day{
+			display: flex;
+			flex: 1 0 13%;
+			height: 13vw;
+			border: 1px solid $light-blue;
+			align-items: center;
+			justify-content: center;
+			font-size: 2vw;
+			font-weight: bold;
+			& p{
+				color: $light-blue;
+			}
+			
+		}
+		&--event{
+			display: block;
+			padding: 1vw;
+			background-color: $light-blue;
+			& p{
+				color: $white;
+				font-size: 1.5vw;
+				margin: 0.8vw 0vw;
+			}
+			& button{
+				font-size: 1vw;
+			}
+		}
+		&--active{
+			background-color: $light-blue;
+			& p{
+				color: $white;
+			}
+		}
+	}
+}

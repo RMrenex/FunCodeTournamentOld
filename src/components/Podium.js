@@ -3,7 +3,7 @@ import React from 'react';
 const Podium = () => {
 
     return (
-        <div className="podium" id="podium">
+        <section className="podium" id="podium">
             <div className="left-title"><h2>GAGNANTS DU DERNIER CONCOURS</h2></div>
             <div className="podium-container">
                 <div className="cards-container">
@@ -35,7 +35,7 @@ const Podium = () => {
 
                 <a href="#" className="podium-container__link">VOIR L'ARTICLE DU CONCOURS</a>
             </div>
-        </div>
+        </section>
     );
 
 }

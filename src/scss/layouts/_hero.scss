@@ -84,14 +84,17 @@
         &--shape1 {
             opacity: 0.4;
             z-index: 30;
+            animation: spin 5s linear infinite;
         }
         &--shape2{
             opacity: 0.6;
             z-index: 20;
+            animation: reverse-spin 10s linear infinite;
         }
         &--shape3{
             opacity: 0.8;
             z-index: 10;
+            animation: spin 15s linear infinite;
         }
     }
 /*     &__wave{

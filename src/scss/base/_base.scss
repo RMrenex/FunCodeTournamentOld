@@ -43,6 +43,6 @@ section{
 ::-webkit-scrollbar-thumb{
     background: $top-gradiant;
     &:hover{
-        background: darken($light-blue, $amount: 10%);
+        background: $bottom-gradiant;
     }
 }

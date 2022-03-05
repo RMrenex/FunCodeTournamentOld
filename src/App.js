@@ -4,14 +4,19 @@ import Podium from './components/Podium';
 import Calendar from './components/Calendar';
 import Footer from './components/Footer';
 
+// LOGIN PAGE
+import Login from './components/Login';
+
 function App() {
   return (
     <div className="App">
-      <Hero />
+{/*    <Hero />
       <About />
       <Podium />
       <Calendar />
-      <Footer />
+      <Footer /> */}
+
+      <Login />
     </div>
   );
 }

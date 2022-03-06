@@ -12,8 +12,6 @@ function App() {
 
   return (
     <Router>
-      {/* <Hero/> */}
-      <Navbar />
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
@@ -21,7 +19,6 @@ function App() {
         <Route path='/article' element={<Article/>}/>
         <Route path='/dashboard' element={<Dashboard/>}/>
       </Routes>
-      <Footer/>
     </Router>
   );
 }

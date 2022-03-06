@@ -28,13 +28,15 @@ class Calendar extends Component {
     getNextContest() {
 
         let contestsInMonth = [];
-        Array.from(this.contests).filter(contest => contest.finish === false).map(contest => {
-            if ((new Date(contest.start_date).getMonth() + 1) === month) {
-                contestsInMonth.push(contest)
-            }
-        })
-        this.setState({ contestsInMonth: contestsInMonth });
-        return contestsInMonth;
+        if(this.contests !== null){
+            Array.from(this.contests).filter(contest => contest.finish === false).map(contest => {
+                if ((new Date(contest.start_date).getMonth() + 1) === month) {
+                    contestsInMonth.push(contest)
+                }
+            })
+            this.setState({ contestsInMonth: contestsInMonth });
+            return contestsInMonth;
+        }
     }
 
     updateCalendar(){

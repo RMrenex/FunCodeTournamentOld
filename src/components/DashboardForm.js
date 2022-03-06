@@ -17,7 +17,7 @@ const DashboardForm = () => {
         e.preventDefault();
 
         if(name !== "" && startDate !== "" && endDate !== "" && type !== "" && status !== "" && contributors !== ""){
-            /*createNewContest({
+            createNewContest({
                 uuid: "",
                 name: name,
                 start_date: startDate,
@@ -25,8 +25,7 @@ const DashboardForm = () => {
                 type: type,
                 finish: status,
                 users: Array.from(contributors.replace(/ /g,'').split(","))
-            })*/
-            console.log(e)
+            })
             sucess();
         } else {
             error();

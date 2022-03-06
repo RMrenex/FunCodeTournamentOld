@@ -12,9 +12,9 @@ const Hero = () => {
 
                 <div className="navbar">
                     <ul>
-                        <li><a href="#about">Qui sommes-nous ?</a></li>
-                        <li><a href="#podium">Gagnants</a></li>
-                        <li><a href="#calendar">Calendrier</a></li>
+                        <li><a href="/#about">Qui sommes-nous ?</a></li>
+                        <li><a href="/#podium">Gagnants</a></li>
+                        <li><a href="/#calendar">Calendrier</a></li>
                         <li><a href="/blog">Blog</a></li>
                     </ul>
                 </div>

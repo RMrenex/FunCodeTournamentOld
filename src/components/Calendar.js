@@ -1,44 +1,90 @@
 import React, { Component } from 'react';
-import { retrieveContests } from '../services/contest_service'
 const YEAR = new Date().getFullYear();
 let month = new Date().getMonth() + 1;
+let stringMonth = new Date().toLocaleString('fr-FR', { month: 'long' });
 
 class Calendar extends Component {
 
-    async componentDidMount(){
-        console.log(YEAR, month)
+    contests = JSON.parse(localStorage.getItem("contests"));
+    nextContest = this.getNextContest();
+
+    componentDidMount() {
         this.getDaysOfMonthInArray();
-        //let contests = await retrieveContests();
-        //this.setState({contests: contests});
+        this.updateCalendar();
     }
+
 
     getDaysOfMonthInArray() {
         let monthIndex = month - 1;
         let date = new Date(YEAR, monthIndex, 1);
         let result = [];
         while (date.getMonth() == monthIndex) {
-          result.push(date.getDate());
-          date.setDate(date.getDate() + 1);
+            result.push(date.getDate());
+            date.setDate(date.getDate() + 1);
         }
-        this.setState({daysInMonth: result});
-      }
+        this.setState({ daysInMonth: result });
+    }
 
-    render(){
+    getNextContest() {
+
+        let contestsInMonth = [];
+        Array.from(this.contests).filter(contest => contest.finish === false).map(contest => {
+            if ((new Date(contest.start_date).getMonth() + 1) === month) {
+                contestsInMonth.push(contest)
+            }
+        })
+        this.setState({ contestsInMonth: contestsInMonth });
+        return contestsInMonth;
+    }
+
+    updateCalendar(){
+        setTimeout(() => {
+            Array.from(document.getElementsByClassName('calendar-container__days')[0].children).forEach((case_, i) => {
+                this.nextContest.forEach(contest => {
+                    if(case_.innerText >= new Date(contest.start_date).getDate() && case_.innerText <= new Date(contest.end_date).getDate()){
+                        if(new Date(contest.start_date).getTime() === new Date(contest.end_date).getTime()){
+                            case_.classList.toggle('calendar-container__days--event')
+                            let p = document.createElement('p');
+                            p.innerHTML = "Début et fin " + contest.name.toLowerCase();
+                            case_.appendChild(p)
+                        } else if(i === 19){
+                            case_.classList.toggle('calendar-container__days--event')
+                            let p = document.createElement('p');
+                            p.innerHTML = "Début " + contest.name.toLowerCase();
+                            case_.appendChild(p)
+                        } else if(i === 24){
+                            case_.classList.toggle('calendar-container__days--event')
+                            let p = document.createElement('p');
+                            p.innerHTML = "Fin " + contest.name.toLowerCase();
+                            case_.appendChild(p)
+                        }else{
+                            case_.classList.toggle('calendar-container__days--active')
+                            console.log(case_)
+                        }
+
+                    }
+                })
+            })
+        }, 500);
+
+    }
+
+    render() {
+        const { contests } = this.props;
         return (
             <section className="calendar" id="calendar">
-            <div className="left-title"><h2>GAGNANTS DU DERNIER CONCOURS</h2></div>
-            <div className="calendar-container">
-                <div className="calendar-container__title"><h3>CALENDRIER DE MARS {YEAR}</h3></div>
-                <div className="calendar-container__days">
-                    {
-                        this.state !== null && (
-                            this.state.daysInMonth.map((day, i) => {
-                                return (<div key={i} className="calendar-container__days--day"><p>{day}</p></div>)
-                            })
-                        )
-                        
-                    }
-                    {/*<div className="calendar-container__days--day"><p>1</p></div>
+                <div className="left-title"><h2>GAGNANTS DU DERNIER CONCOURS</h2></div>
+                <div className="calendar-container">
+                    <div className="calendar-container__title"><h3>CALENDRIER DE {stringMonth.toUpperCase()} {YEAR}</h3></div>
+                    <div className="calendar-container__days">
+                        {
+                            this.state !== null && (
+                                this.state.daysInMonth.map((day, i) => {
+                                    return (<div key={i+1} className="calendar-container__days--day"><p>{day}</p></div>)
+                                })
+                            )
+                        }
+                        {/*<div className="calendar-container__days--day"><p>1</p></div>
                     <div className="calendar-container__days--day"><p>2</p></div>
                     <div className="calendar-container__days--day"><p>3</p></div>
                     <div className="calendar-container__days--day"><p>4</p></div>
@@ -82,10 +128,10 @@ class Calendar extends Component {
                     <div className="calendar-container__days--day"></div>
                     <div className="calendar-container__days--day"></div>
                     <div className="calendar-container__days--day"></div>*/}
-                    
+
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
         )
     }
 } export default Calendar;

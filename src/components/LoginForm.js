@@ -1,7 +1,7 @@
 import React from "react";
 import loginIllu from '../assets/login-illu.png'
 
-const Login = () => {
+const LoginForm = () => {
 
     return (
         <div className="login-container">
@@ -32,4 +32,4 @@ const Login = () => {
 
 }
 
-export default Login;
+export default LoginForm;

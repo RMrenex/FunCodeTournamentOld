@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import LoginForm from '../components/LoginForm'
 
-class Home extends Component {
+class Login extends Component {
     render() {
         return (
             <div>
@@ -11,4 +11,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default Login;

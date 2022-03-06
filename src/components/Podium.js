@@ -1,19 +1,9 @@
 import React, { Component } from 'react';
-import { retrieveContests } from '../services/contest_service'
 
 class Podium extends Component {
 
-
-    async componentDidMount() {
-        let contests = await retrieveContests();
-        contests.forEach(contest => {
-            if (contest.finish === true) {
-                this.setState({ lastContestContributors: contest.users });
-            }
-        })
-    }
-
     render() {
+        const {contests} = this.props;
         return (
             <section className="podium" id="podium">
                 <div className="left-title"><h2>GAGNANTS DU DERNIER CONCOURS</h2></div>
@@ -24,9 +14,7 @@ class Podium extends Component {
                             <div className="podium-card__icon">O</div>
                             <div className="podium-card__player">
                                 {
-                                    this.state !== null && (
-                                        <p>{this.state.lastContestContributors[0].contributors}</p>
-                                    )
+                                    <p>{contests[0].contributors}</p>
                                 }
                             </div>
                         </div>
@@ -36,11 +24,9 @@ class Podium extends Component {
                             <div className="podium-card__icon">O</div>
                             <div className="podium-card__player">
                                 {
-                                    this.state !== null && (
-                                        this.state.lastContestContributors[1].contributors.map(contributor => {
-                                            return (<p key={contributor}>{contributor}</p>)
-                                        })
-                                    )
+                                    contests[1].contributors.map(contributor => {
+                                        return (<p key={contributor}>{contributor}</p>)
+                                    })
                                 }
                             </div>
                         </div>
@@ -50,17 +36,15 @@ class Podium extends Component {
                             <div className="podium-card__icon">O</div>
                             <div className="podium-card__player">
                                 {
-                                    this.state !== null && (
-                                        this.state.lastContestContributors[2].contributors.map(contributor => {
-                                            return (<p key={contributor}>{contributor}</p>)
-                                        })
-                                    )
+                                    contests[2].contributors.map(contributor => {
+                                        return (<p key={contributor}>{contributor}</p>)
+                                    })
                                 }
                             </div>
                         </div>
                     </div>
 
-                    <a href="#" className="podium-container__link">VOIR L'ARTICLE DU CONCOURS</a>
+                    <a href="/article" className="podium-container__link">VOIR L'ARTICLE DU CONCOURS</a>
                 </div>
             </section>
         )

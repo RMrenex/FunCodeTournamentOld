@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 const DashboardForm = () => {
 
     const sucess = () => toast.success("Concours crée");
-    const error = () => toast.error("L'un des des champs est manquant");
+    const error = () => toast.error("Un ou plusieurs champs sont manquant");
     const [name, setName] = useState("");
     const [type, setType] = useState("");
     const [startDate, setStartDate] = useState("");

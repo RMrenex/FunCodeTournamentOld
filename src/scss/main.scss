@@ -1,0 +1,29 @@
+// UTILS
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/animations";
+
+// BASE
+@import "./base/base";
+
+// COMPENENT
+@import "./components/buttons";
+@import "./components/section-title";
+@import "./components/podium-card";
+@import "./components/calendar";
+@import "./components/article";
+@import "./components/table";
+
+// LAYOUTS
+@import "./layouts/navbar";
+@import "./layouts/hero";
+@import "./layouts/about";
+@import "./layouts/podium";
+@import "./layouts/footer";
+@import "./layouts/simple-navbar";
+
+// PAGES
+@import "./pages/login";
+@import "./pages/blog";
+@import "./pages/article";
+@import "./pages/dashboard"

@@ -1,0 +1,21 @@
+.border-button{
+    @include buttons;
+    border: 3px solid $white;
+    background: none;
+    transition: 0.2s;
+    &:hover{
+        background: $white;
+        color: $light-blue
+    }
+}
+
+.button{
+    @include buttons;
+    padding: 1.5rem 2rem;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, $light-blue 0%, $dark-blue 50%, $light-blue 100%);
+    transition: 0.5s;
+    &:hover{
+        background-position: right center;
+    }
+}

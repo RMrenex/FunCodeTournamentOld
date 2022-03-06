@@ -4,11 +4,12 @@ const DEV_URL = 'http://localhost:3000'
 
 export const verifyAdminCredential = (credentials) => {
 
-    axios.post(DEV_URL + '/api/user', credentials).then(
+    axios.post(PROD_URL + '/api/user', credentials).then(
         res => {
-            console.log(res.status);
+            localStorage.setItem("loginResult", JSON.stringify({loginResult: res.data}));
         }
     ).catch((err) => {
+        localStorage.setItem("loginResult", JSON.stringify({loginResult: "KO"}));
         console.log(err);
     });
 }

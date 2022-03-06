@@ -11,7 +11,7 @@ const About = () => {
                     <img src={illustration} alt="Logo FunCode Tournament" className="about-container__illustration--image"></img>
                 </div>
                 <div className='about-container__text'>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>FunCode Tournament est serveur discord proposant des concours de développement que ce soit du développement web, du développement de jeux vidéo ou encore de l'algorithmie. Vous retrouverez sur notre serveur discord une communauté active et accueillante ayant pour but de progresser dans le développement tout en s'amusant via les nombreux concours que nous proposons. N'hésitez donc pas à venir nous dire bonjour sur notre discord.</p>
                     <a href="https://discord.com/invite/UpavTYdhyC"><button className="button">REJOINS NOTRE DISCORD &nbsp;<i className="fa-brands fa-discord"></i></button></a>
                 </div>
             </div>

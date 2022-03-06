@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCrown, faTrophy, faMedal } from '@fortawesome/free-solid-svg-icons';
 import React, { Component } from 'react';
 
 class Podium extends Component {
@@ -13,7 +11,7 @@ class Podium extends Component {
                     <div className="cards-container">
                         <div className="podium-card">
                             <div className="podium-card__place podium-card__place--first">1</div>
-                            <div className="podium-card__icon"><FontAwesomeIcon icon={faCrown}/></div>
+                            <div className="podium-card__icon"><i className="fa-solid fa-crown"></i></div>
                             <div className="podium-card__player">
                                 {
                                     <p>{contests[0].contributors}</p>
@@ -23,7 +21,7 @@ class Podium extends Component {
 
                         <div className="podium-card">
                             <div className="podium-card__place podium-card__place--second">2</div>
-                            <div className="podium-card__icon"><FontAwesomeIcon icon={faTrophy}/></div>
+                            <div className="podium-card__icon"><i className="fa-solid fa-trophy"></i></div>
                             <div className="podium-card__player">
                                 {
                                     contests[1].contributors.map(contributor => {
@@ -35,7 +33,7 @@ class Podium extends Component {
 
                         <div className="podium-card">
                             <div className="podium-card__place podium-card__place--third">3</div>
-                            <div className="podium-card__icon"><FontAwesomeIcon icon={faMedal}/></div>
+                            <div className="podium-card__icon"><i className="fa-solid fa-medal"></i></div>
                             <div className="podium-card__player">
                                 {
                                     contests[2].contributors.map(contributor => {

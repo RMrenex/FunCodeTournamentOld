@@ -1,7 +1,9 @@
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 const PROD_URL = 'http://funcode.eu-4.evennode.com'
-const DEV_URL = 'http://localhost:3000'
+// const DEV_URL = 'http://localhost:3000'
+
+const DEV_URL = 'http://funcode.eu-4.evennode.com'
 
 export const retrieveContests = () => {
 

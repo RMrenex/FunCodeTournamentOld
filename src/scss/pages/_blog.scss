@@ -1,5 +1,5 @@
 .blog-container{
-    padding: 10rem 25rem;
+    padding: 10rem 15rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -28,7 +28,7 @@
         }
         &:hover{
             &::before{
-                width: 24%;
+                width: 19%;
                 border-color: $light-blue;
             }
         }
